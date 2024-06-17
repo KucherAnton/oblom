@@ -1390,7 +1390,7 @@ border-radius: 20px; /* Задает радиус закругления угл�
   .social-image img {
     max-width: 50%; /* устанавливаем максимальную ширину изображения */
     position: relative;
-    margin: 200px;
+    margin: -1120px;
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 20px;
@@ -1696,11 +1696,9 @@ border-radius: 20px; /* Задает радиус закругления угл�
   .container_1 {
     padding-right: 0;
     background-position: center right;
+    background-image: url('images/photo_3_2024-04-28_16-20-58_result.webp');
   }
-  .section-heading {
-    margin-bottom: 180px;
-
-  }
+  
 }
 .hide {
   display: none;
@@ -1818,13 +1816,15 @@ border-radius: 20px; /* Задает радиус закругления угл�
   margin-bottom: 50px;
   width: 100%;
   padding-left: 100px;
-  font-family: 'Bahnschrift';
+  font-family: 'Kontemporary';
 }
 @media (max-width: 767px) {
   .booking {
-    font-size: 36px; /* размер шрифта будет зависеть от ширины экрана */
+    font-size: 60px; /* размер шрифта будет зависеть от ширины экрана */
     padding-left: 0%;
-    padding-top: 30px;
+    padding-top: 60px;
+    text-align: center;
+    font-weight: 500;
   }
 }
 .container_2 {
@@ -2265,14 +2265,49 @@ border-radius: 20px; /* Задает радиус закругления угл�
     .contact-section .section-title .heading {
       font-size: 20px; } 
 }
-.half-screen {
-  position: fixed;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 400px);
-    height: 50vh;
-    background: #f0f0f0;
-    display: none;
-    z-index: 999;
+
+.rounded-button {
+  background: linear-gradient(to right, #FF6B00, #994000);
+  border: 2px solid rgba(204, 204, 204); /* Убираем рамку */
+  color: white; /* Цвет текста */
+  padding: 2px 30px; /* Отступы */
+  text-align: center; /* Выравнивание текста по центру */
+  text-decoration: none; /* Убираем подчеркивание */
+  display: inline-block; /* Встраивание как блочный элемент */
+  font-size: 24px; /* Размер шрифта */
+  font-weight: 500;
+  font-family: 'Bahnschrift';
+  border-radius: 25px; /* Закругленные углы */
+  margin-top: 20px; /* Отступ сверху */
+  margin-bottom: 50px;
+}
+
+.ftco-blocks-cover-1 .container {
+  position: relative;
+}
+
+.ftco-blocks-cover-1 .rounded-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Стили для кнопки "Забронировать" */
+.book-now {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #FF6B00, #994000);
+  color: #fff; /* Цвет текста кнопки */
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; /* Отступ сверху */
+}
+
+/* Стили при наведении на кнопку */
+.book-now:hover {
+  background-color: #a1ec0b; /* Цвет фона при наведении */
 }
