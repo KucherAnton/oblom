@@ -1,5 +1,4 @@
 .site-navbar {
-
 	margin-bottom: 0px;
 	z-index: 1999;
 	position: absolute;
@@ -23,29 +22,26 @@
 		a {
 			color: $white;
 		}
-		
 
 		@include media-breakpoint-down(md) {
 			float: left;
 			position: relative;
 		}
 	}
-	
-	
+
 	.site-navigation {
 		&.border-bottom {
-			border-bottom: 1px solid lighten($gray-100, 80%)!important;
+			border-bottom: 1px solid lighten($gray-100, 80%) !important;
 		}
 		.site-menu {
 			margin: 0;
 			padding: 0;
 			margin-bottom: 0;
 			.active {
-				color: rgba($white, 1)!important;
-				
+				color: rgba($white, 1) !important;
 			}
 			a {
-				text-decoration: none!important;
+				text-decoration: none !important;
 				display: inline-block;
 			}
 			> li {
@@ -54,18 +50,17 @@
 					margin-left: 15px;
 					margin-right: 15px;
 					padding: 20px 0px;
-					color: rgba($white, .7)!important;
+					color: rgba($white, 0.7) !important;
 					display: inline-block;
-					text-decoration: none!important;
-					
+					text-decoration: none !important;
+
 					&:hover {
-						color: $white!important;
-						
+						color: $white !important;
 					}
 				}
 				&.active {
 					> a {
-						color: rgba($white, 1)!important;
+						color: rgba($white, 1) !important;
 					}
 				}
 			}
@@ -73,10 +68,10 @@
 				position: relative;
 				> a {
 					position: relative;
-					padding-right: 20px;						
+					padding-right: 20px;
 					&:before {
 						position: absolute;
-						content: "\e313";
+						content: '\e313';
 						font-size: 16px;
 						top: 50%;
 						right: 0;
@@ -91,7 +86,7 @@
 					position: absolute;
 					text-align: left;
 					border-top: 2px solid $primary;
-					box-shadow: 0 2px 10px -2px rgba(0,0,0,.1);
+					box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
 					padding: 0px 0;
 					margin-top: 20px;
 					margin-left: 0px;
@@ -106,7 +101,7 @@
 							bottom: 100%;
 							left: 20%;
 							border: solid transparent;
-							content: " ";
+							content: ' ';
 							height: 0;
 							width: 0;
 							position: absolute;
@@ -117,18 +112,17 @@
 							border-bottom-color: $white;
 							border-width: 10px;
 							margin-left: -10px;
-						}	
+						}
 					}
-					
 
 					a {
 						// font-size: 16px;
 						text-transform: none;
 						letter-spacing: normal;
 						transition: 0s all;
-						color: $black!important;
+						color: $black !important;
 						&.active {
-							color: $primary!important;
+							color: $primary !important;
 							background: $gray-100;
 						}
 					}
@@ -154,15 +148,18 @@
 						&.has-children {
 							> a {
 								&:before {
-									content: "\e315";
+									content: '\e315';
 									right: 20px;
 								}
 							}
-							> .dropdown, > ul {
+							> .dropdown,
+							> ul {
 								left: 100%;
 								top: 0;
 							}
-							&:hover, &:active, &:focus {
+							&:hover,
+							&:active,
+							&:focus {
 								> a {
 									background: $gray-100;
 									color: $gray-400;
@@ -171,28 +168,29 @@
 						}
 					}
 				}
-				
-				&:hover, &:focus, &:active {
+
+				&:hover,
+				&:focus,
+				&:active {
 					> a {
 						color: $primary;
 					}
 				}
-				&:hover, &:focus, &:active {
+				&:hover,
+				&:focus,
+				&:active {
 					cursor: pointer;
 					> .dropdown {
 						transition-delay: 0s;
 						margin-top: 0px;
 						visibility: visible;
 						opacity: 1;
-
-
 					}
 				}
 			}
 		}
 	}
 }
-
 
 // mobile menu
 
@@ -204,10 +202,10 @@
 	padding-top: 20px;
 	background: $white;
 	height: calc(100vh);
-	
+
 	transform: translateX(110%);
-	box-shadow: -10px 0 20px -10px rgba(0,0,0,.1);
-	transition: .3s all ease-in-out;
+	box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+	transition: 0.3s all ease-in-out;
 
 	.offcanvas-menu & {
 		transform: translateX(0%);
@@ -218,7 +216,7 @@
 		float: left;
 		padding-left: 20px;
 		padding-right: 20px;
-		
+
 		.site-mobile-menu-close {
 			float: right;
 			margin-top: 8px;
@@ -229,7 +227,7 @@
 				padding-right: 0px;
 				line-height: 1;
 				cursor: pointer;
-				transition: .3s all ease;
+				transition: 0.3s all ease;
 				&:hover {
 					color: $gray-400;
 				}
@@ -260,7 +258,6 @@
 
 		height: calc(100vh - 52px);
 		padding-bottom: 150px;
-
 	}
 	.site-nav-wrap {
 		padding: 0;
@@ -311,17 +308,17 @@
 			&:before {
 				font-size: 12px;
 				z-index: 20;
-				font-family: "icomoon";
-				content: "\f078";
+				font-family: 'icomoon';
+				content: '\f078';
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%) rotate(-180deg);
-				transition: .3s all ease;
+				transition: 0.3s all ease;
 			}
 			&.collapsed {
 				&:before {
-					transform: translate(-50%, -50%);	
+					transform: translate(-50%, -50%);
 				}
 			}
 		}
@@ -330,7 +327,7 @@
 			position: relative;
 			float: left;
 			width: 100%;
-			
+
 			> a {
 				padding-left: 20px;
 				font-size: 20px;
@@ -352,7 +349,7 @@
 							display: block;
 							> a {
 								font-size: 16px;
-								padding-left: 60px;			
+								padding-left: 60px;
 							}
 						}
 					}
@@ -360,7 +357,7 @@
 			}
 		}
 
-		&[data-class="social"] {
+		&[data-class='social'] {
 			float: left;
 			width: 100%;
 			margin-top: 30px;
@@ -369,17 +366,13 @@
 				width: auto;
 				&:first-child {
 					a {
-						padding-left: 15px!important;
+						padding-left: 15px !important;
 					}
 				}
 			}
 		}
-
 	}
-
-
 }
-
 
 .sticky-wrapper {
 	position: relative;
@@ -392,7 +385,7 @@
 		// margin-top: 96px;
 	}
 	.site-navbar {
-		transition: .3s all ease;
+		transition: 0.3s all ease;
 	}
 	.site-navbar {
 		background: $white;
@@ -405,20 +398,19 @@
 		ul {
 			li {
 				a {
-					color: rgba($white, .7)!important;
+					color: rgba($white, 0.7) !important;
 					&.active {
-						color: $white!important;
+						color: $white !important;
 					}
 				}
 			}
 		}
-	}	
+	}
 	&.is-sticky {
-		
 		.site-navbar {
 			background: $white;
 			// border-bottom: 1px solid transparent;
-			box-shadow: 4px 0 20px -5px rgba(0,0,0,.2);
+			box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
 			.site-logo {
 				a {
 					color: $primary;
@@ -427,9 +419,9 @@
 			ul {
 				li {
 					a {
-						color: $black!important;
+						color: $black !important;
 						&.active {
-							color: $primary!important;
+							color: $primary !important;
 						}
 					}
 				}
@@ -437,12 +429,11 @@
 		}
 	}
 	.shrink {
-		padding-top: 0px!important;
-		padding-bottom: 0px!important;
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
 		@include media-breakpoint-down(md) {
-			padding-top: 30px!important;
-			padding-bottom: 30px!important;
+			padding-top: 30px !important;
+			padding-bottom: 30px !important;
 		}
 	}
 }
-

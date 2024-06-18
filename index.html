@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -61,6 +61,10 @@
   </script>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
@@ -136,6 +140,31 @@
     body.modal-open {
       padding-right: 17px;
     }
+
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ff6600;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e65c00;
+    }
+
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #ff6600 #000000;
+    }
   </style>
 
   <title>Центр ярости обЛОМ</title>
@@ -193,531 +222,599 @@
                 </a>
               </div>
             </div>
-            <button class="rounded-button">ПОЗВОНИТЬ</button></div>
+            <button class="rounded-button">ПОЗВОНИТЬ</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div id="fh5co-about" class="fh5co-section">
-      <div id="about" class="container_1" style="background-image: url('images/photo_12_2024-04-28_16-20-58_result.webp');">
+  <div id="fh5co-about" class="fh5co-section">
+    <div id="about" class="container_1"
+      style="background-image: url('images/photo_12_2024-04-28_16-20-58_result.webp');">
 
-        <div class="img-wrap animate-box">
-          <img src="images/photo_3_2024-04-28_16-20-58_result.webp" class="image_1" width="100%">
-        </div>
-      
-        <div class="col-md-5 animate-box">
-          <div class="section-heading">
-            <img src="images/Group 4.png" class="image_2" width="100%">
-            <p>Как расслабиться и дать волю накопившимся эмоциям? Очень просто. Приходи в
-              центр ярости «обЛОМ» в Ростове-на-Дону </p>            
-            <p style="font-weight:900;" class="mojesh">ТОЛЬКО ЗДЕСЬ ТЫ МОЖЕШЬ:<br /></p>
-            <p>
-              ▸разбить все, что видишь в комнате<br />
-              ▸срывать голос, как сумасшедший<br />
-              ▸высвободить свои негативные чувства<br />
-              ▸и просто хорошо провести время с друзьями</p>
-            <p>Мы ждем тебя, наш буйный больной!</p>
-          </div>
-        </div>
-      
+      <div class="img-wrap animate-box">
+        <img src="images/photo_3_2024-04-28_16-20-58_result.webp" class="image_1" width="100%">
       </div>
-      
-      <style>
-        .container_1 {
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          position: relative;
-        }
-      
+
+      <div class="col-md-5 animate-box">
+        <div class="section-heading">
+          <img src="images/Group 4.png" class="image_2" width="100%">
+          <p>Как расслабиться и дать волю накопившимся эмоциям? Очень просто. Приходи в
+            центр ярости «обЛОМ» в Ростове-на-Дону </p>
+          <p style="font-weight:900;" class="mojesh">ТОЛЬКО ЗДЕСЬ ТЫ МОЖЕШЬ:<br /></p>
+          <p>
+            ▸разбить все, что видишь в комнате<br />
+            ▸срывать голос, как сумасшедший<br />
+            ▸высвободить свои негативные чувства<br />
+            ▸и просто хорошо провести время с друзьями</p>
+          <p>Мы ждем тебя, наш буйный больной!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <style>
+      .container_1 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .container_1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/photo_3_2024-04-28_16-20-58_result.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        /* Устанавливаем прозрачность для размытия */
+        filter: blur(5px);
+        /* Размытие */
+
+      }
+
+      @media (min-width: 768px) {
         .container_1::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url('images/photo_3_2024-04-28_16-20-58_result.webp');
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          opacity: 1; /* Устанавливаем прозрачность для размытия */
-          filter: blur(5px); /* Размытие */
-          
+          display: none;
+          /* Скрываем размытие на больших экранах */
         }
-        
-        @media (min-width: 768px) {
-          .container_1::before {
-            display: none; /* Скрываем размытие на больших экранах */
-          }
-        }
-        @media (max-width: 767px) {
-          .container_1 {
+      }
+
+      @media (max-width: 767px) {
+        .container_1 {
           padding: 20px;
-          
-          }
+
+        }
 
         .image_2 {
           display: block;
-          margin: 0 auto 20px; /* Центрирование изображения по горизонтали и добавление отступа снизу */
-          }
+          margin: 0 auto 20px;
+          /* Центрирование изображения по горизонтали и добавление отступа снизу */
+        }
+
         .section-heading {
           margin-bottom: 180px;
           background-color: white;
-          opacity: 0.7; /* Добавляем полупрозрачность */
-          border-radius: 21px; /* Закругленные углы */
-          }
+          opacity: 0.7;
+          /* Добавляем полупрозрачность */
+          border-radius: 21px;
+          /* Закругленные углы */
+        }
+
         .section-heading p {
           font-size: 16px;
           padding-left: 40px;
           padding-right: 40px;
-          opacity: 1; /* Добавляем полупрозрачность */
+          opacity: 1;
           line-height: 15px;
-          }
-          
         }
-      </style>
-      
-    </div>
 
-    <div id="rooms-rates" class="site-section-rooms bg-light">
-      <div class="ftco-blocks-cover menu">
-        <div class="wrap">
-          <div class="items-wrap">
-            <div class="items marquee">
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-            </div>
-            <div aria-hidden="true" class="items marquee">
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-              <h2 class="hide-1" style="font-family: 'Kontemporary';">
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-                <span>КОМНАТЫ</span>
-              </h2>
-            </div>
-          </div>
+        .video_yt {
+          margin: 40px
+        }
 
-        </div>
-      </div>
+      }
 
+      .post-entry-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-      <div class="container_4">
-        <div class="row row_2 align-items-stretch">
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="post-entry-2 h-100">
-              <a>
-                <img src="images/photo_4_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <h2>Комната 1</h2>
-              <a class="more">Место, где ты сможешь выплеснуть свою ярость, энергично разбивая посуду и технику. Кричи,
-                ругайся и плачь — у тебя нет никаких ограничений!</a>
-              <a href="tel://8 (938) 117-79-11" class="book-now">Забронировать</a> 
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="post-entry-2 h-100">
-              <a>
-                <img src="images/photo_5_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <h2>Комната 2</h2>
-              <a class="more">В этой комнате есть все, что нужно для отрыва по полной программе: музыка, столы, бочки,
-                подвесы и многое другое. Положительные эмоции и хорошее настроение тебе точно обеспечены</a>
-              <a href="tel://8 (938) 117-79-11" class="book-now">Забронировать</a> 
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5">
-            <div class="post-entry-2 h-100">
-              <a>
-                <img src="images/photo_6_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <h2>Комната 3</h2>
-              <a class="more">Hard уровень для самых рискованых и опасных. Стекло, посуда, мониторы и даже предмет
-                мебели. Покажи, на что ты способен!</a>
-              <a href="tel://8 (938) 117-79-11" class="book-now">Забронировать</a> 
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="container">
-        <div class="row align-items-stretch">
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100" onclick="openHalfScreenBlock()">
-              <a>
-                <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «неПросто посмотреть»</a></h2>
-                <a class="more">Время: 45 минут</a>
-                <a class="more"><br>Цена: 3000 рублей</a>
-                <a class="more"><br>Количество человек: 1-2</a><br />
-                <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
-                  data-target="#myModal">Забронировать</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Час будет жарким»</a></h2>
-                <a class="more">Время: 60 минут</a>
-                <a class="more"><br>Цена: 5000 рублей</a>
-                <a class="more"><br>Количество человек: 1-4</a><br />
-                <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
-                  data-target="#myModal">Забронировать</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Только спокойствие»</a></h2>
-                <a class="more">Время: 90 минут</a>
-                <a class="more"><br>Цена: 7000 рублей</a>
-                <a class="more"><br>Количество человек: 1-4</a><br />
-                <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
-                  data-target="#myModal">Забронировать</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Не сломайся!»</a></h2>
-                <a class="more">Время: 120 минут</a>
-                <a class="more"><br>Цена: 9000 рублей</a>
-                <a class="more"><br>Количество человек: 1-4</a><br />
-                <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
-                  data-target="#myModal">Забронировать</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Решать тебе»</a></h2>
-                <a class="more">Время: от 45 минут</a>
-                <a class="more"><br>Цена: 4000 рублей</a>
-                <a class="more"><br>Количество человек: 1-6</a><br />
-
-                <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
-                  data-target="#myModal">Забронировать</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_8_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Стерва»</a></h2>
-                <a class="more">Время: 60 минут</a>
-                <a class="more"><br>Цена: 6000 рублей</a>
-                <a class="more"><br>Количество человек: 1-4</a><br />
-                <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
-                  data-target="#myModal">Забронировать</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Корпоративный»</a></h2>
-                <a class="more">В разработке</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «На каждый день»</a></h2>
-                <a class="more">В разработке</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Детский»</a></h2>
-                <a class="more">В разработке</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
-            <div class="post-entry-1 h-100">
-              <a>
-                <img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                <h2><a>ТАРИФ «Свидание»</a></h2>
-                <a class="more">В разработке</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div id="atmosphere" style="display: flex; justify-content: center; align-items: center;">
-      <div class="container_3"
-        style="background-image: url(images/photo_10_2024-04-28_16-20-58_result.webp); width: 100%; background-size: cover; background-position: center; position: relative;">
-        <h2>АТМОСФЕРА</h2>
-        <div class="video_yt">
-          <iframe width="100%" height="600" src="https://www.youtube.com/embed/CQtXkesrqZc?si=Ui4iSi-DfBVnBzg6"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Header</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <form id="order-form">
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea class="form-control" id="address" required></textarea>
-              </div>
-              <div class="form-group">
-                <label for="product">Product:</label>
-                <input type="text" class="form-control" id="product" required>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="fh5co-about" class="fh5co-section">
-      <div id="booking" class="container_2"
-        style="background-image: url('images/photo_11_2024-04-28_16-20-58_result.webp');">
-        <div class="img-wrap animate-box">
-          <img src="images/photo_15_2024-04-28_16-20-58_result.webp" class="image_1" width="100%">
-
-        </div>
-        <div class="col-md-6 animate-box">
-          <div class="booking">БРОНИРОВАНИЕ</div>
-          <div class="contact-blocks">
-            <a href="https://vk.com/rage_center_oblom" class="contact-block">
-              <img src="images/VK.png" class="logo">
-              <p>@rage_center_oblom</p>
-            </a>
-            <a href="https://www.instagram.com/rage_center_oblom_?igsh=MW9xZGs1N25nOHE2MQ==" class="contact-block-inst">
-              <div class="inst">
-                <p>@rage_center_oblom_</p>
-                <div class="gray-text">*принадлежит запрещенной в России организации Meta</div>
-              </div>
-              <img src="images/inst.png" class="logo">
-            </a>
-            <a href="https://t.me/ragecenterobLOM" class="contact-block">
-              <img src="images/tg.png" class="logo">
-              <p>@ragecenterobLOM</p>
-            </a>
-            <!-- <p style="line-height: 100px;" style="font-weight: 600;"><a href="Публичная оферта ИП Бартов.docx"
-                style="color: rgb(244, 137, 38);">Публичная оферта</a></p> -->
-          </div>
-          
-          <div class="section-heading-1">
-            <div class="section-heading-1-p">
-              <!-- <p style="line-height: 25px;" style="font-weight: 600; margin-top: 50px;"><a
-                  href="https://yandex.ru/maps/org/tsentr_yarosti_oblom/147303220168">Мы находимся здесь:
-                  г. Ростов-на-Дону, пр. Будённовский, д. 81.</a></p> -->
-              <p class="contact-information">КОНТАКТНАЯ ИНФОРМАЦИЯ:</p>
-              <p class="numbers"><a href="tel://8 (928) 608-15-12">8 (928) 608-15-12</a> / <a href="tel://8 (938) 117-79-11">8 (938) 117-79-11</a></p>
-              <div class="gray-text-2">(WhatsApp)</div>
-              <p><a href="https://t.me/rage_center_obLOM">@rage_center_obLOM</a></p>
-              <div class="gray-text-2">(Telegram)</div>
-              <p><a href="mailto:ragecenteroblom@gmail.com">ragecenteroblom@gmail.com</a></p>
-              <div class="gray-text-2">(Gmail почта)</div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    <footer class="site-footer">
-    </footer>
+      .post-entry-2 .book-now {
+        margin-top: 15px;
+      }
+    </style>
 
   </div>
 
+  <div id="rooms-rates" class="site-section-rooms bg-light">
+    <div class="ftco-blocks-cover menu">
+      <div class="wrap">
+        <div class="items-wrap">
+          <div class="items marquee">
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+          </div>
+          <div aria-hidden="true" class="items marquee">
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+            <h2 class="hide-1" style="font-family: 'Kontemporary';">
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+              <span>КОМНАТЫ</span>
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container_4">
+      <div class="row row_2 align-items-stretch">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="post-entry-2 h-100">
+            <a>
+              <img src="images/photo_4_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <h2 class="text-center">Комната 1</h2>
+            <a class="more">Место, где ты сможешь выплеснуть свою ярость, энергично разбивая посуду и технику. Кричи,
+              ругайся и плачь — у тебя нет никаких ограничений!</a>
+            <a href="tel://8 (938) 117-79-11" class="book-now">Забронировать</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="post-entry-2 h-100">
+            <a>
+              <img src="images/photo_5_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <h2 class="text-center">Комната 2</h2>
+            <a class="more">В этой комнате есть все, что нужно для отрыва по полной программе: музыка, столы, бочки,
+              подвесы и многое другое. Положительные эмоции и хорошее настроение тебе точно обеспечены</a>
+            <a href="tel://8 (938) 117-79-11" class="book-now">Забронировать</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="post-entry-2 h-100">
+            <a>
+              <img src="images/photo_6_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <h2 class="text-center">Комната 3</h2>
+            <a class="more">Hard уровень для самых рискованых и опасных. Стекло, посуда, мониторы и даже предмет
+              мебели. Покажи, на что ты способен!</a>
+            <a href="tel://8 (938) 117-79-11" class="book-now">Забронировать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <div class="row align-items-stretch">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100" onclick="openHalfScreenBlock()">
+            <a>
+              <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «неПросто посмотреть»</a></h2>
+              <a class="more">Время: 45 минут</a>
+              <a class="more"><br>Цена: 3000 рублей</a>
+              <a class="more"><br>Количество человек: 1-2</a><br />
+              <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Час будет жарким»</a></h2>
+              <a class="more">Время: 60 минут</a>
+              <a class="more"><br>Цена: 5000 рублей</a>
+              <a class="more"><br>Количество человек: 1-4</a><br />
+              <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Только спокойствие»</a></h2>
+              <a class="more">Время: 90 минут</a>
+              <a class="more"><br>Цена: 7000 рублей</a>
+              <a class="more"><br>Количество человек: 1-4</a><br />
+              <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Не сломайся!»</a></h2>
+              <a class="more">Время: 120 минут</a>
+              <a class="more"><br>Цена: 9000 рублей</a>
+              <a class="more"><br>Количество человек: 1-4</a><br />
+              <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Решать тебе»</a></h2>
+              <a class="more">Время: от 45 минут</a>
+              <a class="more"><br>Цена: 4000 рублей</a>
+              <a class="more"><br>Количество человек: 1-6</a><br />
+
+              <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_8_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Стерва»</a></h2>
+              <a class="more">Время: 60 минут</a>
+              <a class="more"><br>Цена: 6000 рублей</a>
+              <a class="more"><br>Количество человек: 1-4</a><br />
+              <button type="button" class="btn btn-order btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Корпоративный»</a></h2>
+              <a class="more">В разработке</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «На каждый день»</a></h2>
+              <a class="more">В разработке</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Детский»</a></h2>
+              <a class="more">В разработке</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-6">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            </a>
+            <div class="post-entry-1-contents">
+              <h2><a>ТАРИФ «Свидание»</a></h2>
+              <a class="more">В разработке</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="atmosphere" style="display: flex; justify-content: center; align-items: center;">
+    <div class="container_3"
+      style="background-image: url(images/photo_10_2024-04-28_16-20-58_result.webp); width: 100%; background-size: cover; background-position: center; position: relative;">
+      <h2>АТМОСФЕРА</h2>
+      <div class="video_yt">
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/CQtXkesrqZc?si=Ui4iSi-DfBVnBzg6"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Header</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="order-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea class="form-control" id="address" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="product">Product:</label>
+              <input type="text" class="form-control" id="product" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-about" class="fh5co-section">
+    <div id="booking" class="container_2"
+      style="background-image: url('images/photo_11_2024-04-28_16-20-58_result.webp');">
+      <div class="img-wrap animate-box">
+        <img src="images/photo_15_2024-04-28_16-20-58_result.webp" class="image_1" width="100%">
+
+      </div>
+      <div class="col-md-6 animate-box">
+        <div class="booking">БРОНИРОВАНИЕ</div>
+        <div class="contact-blocks">
+          <a href="https://vk.com/rage_center_oblom" class="contact-block">
+            <img src="images/VK.png" class="logo">
+            <p>@rage_center_oblom</p>
+          </a>
+          <a href="https://www.instagram.com/rage_center_oblom_?igsh=MW9xZGs1N25nOHE2MQ==" class="contact-block-inst">
+            <div class="inst">
+              <p>@rage_center_oblom_</p>
+              <div class="gray-text">*принадлежит запрещенной в России организации Meta</div>
+            </div>
+            <img src="images/inst.png" class="logo">
+          </a>
+          <a href="https://t.me/ragecenterobLOM" class="contact-block">
+            <img src="images/tg.png" class="logo">
+            <p>@ragecenterobLOM</p>
+          </a>
+          <!-- <p style="line-height: 100px;" style="font-weight: 600;"><a href="Публичная оферта ИП Бартов.docx"
+                style="color: rgb(244, 137, 38);">Публичная оферта</a></p> -->
+        </div>
+
+        <div class="section-heading-1">
+          <div class="section-heading-1-p">
+            <!-- <p style="line-height: 25px;" style="font-weight: 600; margin-top: 50px;"><a
+                  href="https://yandex.ru/maps/org/tsentr_yarosti_oblom/147303220168">Мы находимся здесь:
+                  г. Ростов-на-Дону, пр. Будённовский, д. 81.</a></p> -->
+            <p class="contact-information">КОНТАКТНАЯ ИНФОРМАЦИЯ:</p>
+            <p class="numbers"><a href="tel://8 (928) 608-15-12">8 (928) 608-15-12</a> / <a
+                href="tel://8 (938) 117-79-11">8 (938) 117-79-11</a></p>
+            <div class="gray-text-2">(WhatsApp)</div>
+            <p><a href="https://t.me/rage_center_obLOM">@rage_center_obLOM</a></p>
+            <div class="gray-text-2">(Telegram)</div>
+            <p><a href="mailto:ragecenteroblom@gmail.com">ragecenteroblom@gmail.com</a></p>
+            <div class="gray-text-2">(Gmail почта)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+  </footer>
+
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('a[href^="#"]');
+
+      for (let link of links) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            scrollToElement(targetElement);
+          }
+        });
+      }
+
+      function scrollToElement(element) {
+        const targetPosition = element.getBoundingClientRect().top;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 100;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      }
+    });
+  </script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.bundle.min"></script>
   <script src="js/owl.carousel.min.js"></script>
