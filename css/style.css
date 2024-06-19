@@ -464,12 +464,6 @@ h2:hover {
 	}
 }
 
-.site-footer {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size: 15px;
-}
-
 .bg-text-line {
 	display: inline;
 	background: #000;
@@ -2379,7 +2373,7 @@ h2:hover {
 }
 @media (max-width: 767px) {
 	.gray-text-2 {
-		font-size: 15px;
+		font-size: 12px;
 	}
 }
 .logo {
@@ -2416,7 +2410,7 @@ h2:hover {
 	.contact-blocks {
 		margin-top: 20px;
 		margin-left: 0;
-		margin-right: 0;
+		margin-right: 70px;
 		margin-bottom: 50px;
 		font-size: 24px;
 		font-family: 'Bahnschrift';
@@ -2424,6 +2418,8 @@ h2:hover {
 	}
 	.contact-block {
 		padding-left: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		margin-top: 20px;
 	}
 	.contact-block-inst {
@@ -2441,7 +2437,7 @@ h2:hover {
 		box-shadow: 0 10px 1px rgba(204, 204, 204);
 	}
 	.logo {
-		width: 40px; /* настройте размер логотипа по вашему желанию */
+		width: 64px; /* настройте размер логотипа по вашему желанию */
 		padding-left: 10px;
 	}
 	.contact-block p {
@@ -2793,3 +2789,148 @@ h2:hover {
 .book-now:hover {
 	background-color: #a1ec0b; /* Цвет фона при наведении */
 }
+
+.site-footer {
+	padding-top: 20px;
+	font-size: 15px;
+	background-color: #393939;
+  }
+  
+@media (max-width: 767px) {
+	.geomet {
+	  	width: 40px;
+	  	padding-bottom: 40px;
+		padding-top: 10px;
+	}
+	.geo {
+	  	color: white;
+	  	font-family: 'Bahnschrift';
+	  	margin-bottom: 0;
+	  	font-size: 17px;
+	  	font-weight: 500;
+	}
+	.geo a {
+	  	color: white;
+	  	font-weight: 300;
+	}
+	.footer-geo {
+	  	display: flex;
+	  	align-items: center;
+	}
+	.geo-content {
+	  	display: flex;
+	  	margin-left: 20px;
+	  	margin-right: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.organization-data {
+		color: white;
+	  	font-family: 'Bahnschrift';
+	  	margin-bottom: 0;
+	  	font-size: 12px;
+		font-weight: 400;
+	}
+	.payment-wrapper {
+		display: flex;
+		align-items: flex-start;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.payment-wrapper-column {
+		display: flex;
+		flex-direction: column;
+		margin-right: 20px;
+	}
+	.payment-content {
+		display: flex;
+		flex-direction: column;
+		margin-left: 22px;
+	}
+	.payment {
+		width: 117px;
+	}
+	.organization-data-left {
+		margin-left: 15px;
+		margin-top: 30px;
+		margin-right: 150px;
+	}
+	.rights .organization-data{
+		margin-top: 30px;
+		font-size: 7px;
+		margin-left: 15px;
+		margin-right: 15px;
+		font-weight: 100;
+	}
+	.rights {
+		padding-bottom: 50px;
+	}
+}
+/*
+.geomet {
+  	width: 40px;
+  	padding-bottom: 40px;
+	padding-top: 10px;
+}
+.geo {
+  	color: white;
+  	font-family: 'Bahnschrift';
+  	margin-bottom: 0;
+  	font-size: 24px;
+  	font-weight: 500;
+}
+.geo a {
+  	color: white;
+  	font-weight: 300;
+}
+.footer-geo {
+  	display: flex;
+  	align-items: center;
+}
+.geo-content {
+  	display: flex;
+  	margin-left: 20px;
+  	margin-right: 20px;
+}
+.organization-data {
+	color: white;
+  	font-family: 'Bahnschrift';
+  	margin-bottom: 0;
+  	font-size: 18px;
+	font-weight: 400;
+}
+.payment-wrapper {
+	display: flex;
+	align-items: flex-start;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.payment-wrapper-column {
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+}
+.payment-content {
+	display: flex;
+	flex-direction: column;
+	margin-left: 22px;
+}
+.payment {
+	width: 117px;
+}
+.organization-data-left {
+	margin-left: 15px;
+	margin-top: 30px;
+	margin-right: 150px;
+}
+.rights .organization-data{
+	margin-top: 50px;
+	font-size: 13px;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-weight: 100;
+}
+.rights {
+	padding-bottom: 50px;
+}
+*/
