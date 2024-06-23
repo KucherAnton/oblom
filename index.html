@@ -76,11 +76,13 @@
     .modal-content {
       background-color: #000;
       /* Черный фон */
-      color: #ffa500;
-      /* Оранжевый текст */
+      color: #FFFFFF;
+      /* Белый текст */
       border: none;
       border-radius: 10px;
       overflow: hidden;
+      font-family: 'Bahnschrift';
+      font-weight: 500;
     }
 
     .modal-header {
@@ -461,6 +463,7 @@
 
       .container-desktop {
         display: block;
+        background-image: url('images/мазки.webp');
       }
 
       .container-mobile {
@@ -479,8 +482,9 @@
 
         .tariff-header {
           text-align: center;
-          font-size: 2rem;
+          font-size: 5rem;
           margin-bottom: 20px;
+          font-family: 'Kontemporary';
         }
 
         .tariff-container {
@@ -543,13 +547,17 @@
         }
 
         .modal-dialog {
-          max-width: 80%;
+          max-width: 100%;
         }
 
         .modal-body img {
           width: 100%;
           height: auto;
           margin-bottom: 20px;
+        }
+        
+        .modal_p {
+          line-height: 7px;
         }
 
         .additional-items {
@@ -561,13 +569,17 @@
         .additional-item {
           flex: 0 0 auto;
           margin-right: 10px;
+          width: 30%;
+          background-color: #AAAAAA;
+          height: 100px;
+          border-radius: 5px;
         }
       }
     </style>
 
   </div>
 
-  <div id="rooms-rates" class="site-section-rooms bg-light">
+  <div id="rooms-rates" class="site-section-rooms bg-light" style="background-image: url('images/ленты.webp');">
     <div class="ftco-blocks-cover menu">
       <div class="wrap">
         <div class="items-wrap">
@@ -766,8 +778,8 @@
         </div>
       </div>
     </div>
-
-    <div class="container container-mobile">
+  </div>
+    <div class="container container-mobile" style="background-image: url('images/мазки.webp')">
       <div class="tariff-header">ТАРИФЫ</div>
       <div class="row align-items-stretch">
         <div class="col-lg-4 col-md-6 mb-5 col-12">
@@ -1031,18 +1043,52 @@
           <img src="" alt="Tariff Image" id="tariffModalImage">
           <h2 id="tariffModalTitle">Тариф</h2>
           <p><strong>Что входит?</strong></p>
-          <ul id="tariffModalList"></ul>
-          <p><strong>Время:</strong> <span id="tariffModalTime"></span></p>
-          <p><strong>Цена:</strong> <span id="tariffModalPrice"></span></p>
-          <p><strong>Количество человек:</strong> <span id="tariffModalPeople"></span></p>
+          <ul id="tariffModalList" style="line-height: 25px;"></ul>
+          <div class="modal_p">
+            <p><strong>Время:</strong> <span id="tariffModalTime"></span></p>
+            <p style="color: #FF6B00;"><strong>Цена:</strong> <span id="tariffModalPrice"></span></p>
+            <p><strong>Количество человек:</strong> <span id="tariffModalPeople"></span></p>
+          </div>
+          <p style="color: #8B8B8B; font-weight: 500; margin-bottom: 0;">Добавить к тарифу</p>
           <div class="additional-items">
             <div class="additional-item">
-              <img src="images/item1.jpg" alt="Item 1" class="img-fluid">
-              <p>Item 1</p>
+              <img src="images/мышь.png" alt="Item 1" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>+70 Р</p>
             </div>
             <div class="additional-item">
-              <img src="images/item2.jpg" alt="Item 2" class="img-fluid">
-              <p>Item 2</p>
+              <img src="images/клавиатура.png" alt="Item 2" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>+150 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/кассета.png" alt="Item 3" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>x10</p>
+              <p>+400 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/принтер.png" alt="Item 4" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>+700 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/телевизор.png" alt="Item 5" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>+1000 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/бутылка.png" alt="Item 9" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>x10</p>
+              <p>+400 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/стул.png" alt="Item 6" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>+700 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/комп.png" alt="Item 7" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>+1500 Р</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/тарелка.png" alt="Item 8" class="img-fluid" style="margin-bottom: 10px; margin-top: 10px;">
+              <p>x10</p>
+              <p>+700 Р</p>
             </div>
           </div>
         </div>

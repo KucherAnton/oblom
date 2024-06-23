@@ -449,7 +449,6 @@ h2:hover {
 }
 
 .site-section-rooms {
-	background-image: url('https://i.yapx.ru/XXcjD.jpg');
 	padding: 2.5em 0;
 	background-size: cover;
 	background-position: center center;
@@ -1156,12 +1155,14 @@ h2:hover {
 }
 
 .site-section-rooms {
-	padding: 25rem 0;
+	padding-top: 25rem;
+
 }
 @media (max-width: 991.98px) {
 	.site-section-rooms {
 		padding: 17rem 0;
 		/*background-image: url('https://i.yapx.ru/XXcoO.jpg');*/
+		background-image: url('https://i.yapx.ru/XnD63.png');
 		padding-bottom: 0px;
 	}
 }
