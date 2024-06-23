@@ -2808,41 +2808,41 @@ h2:hover {
 	padding-top: 20px;
 	font-size: 15px;
 	background-color: #393939;
-  }
-  
+}
+
 @media (max-width: 767px) {
 	.geomet {
-	  	width: 40px;
-	  	padding-bottom: 40px;
+		width: 40px;
+		padding-bottom: 40px;
 		padding-top: 10px;
 	}
 	.geo {
-	  	color: white;
-	  	font-family: 'Bahnschrift';
-	  	margin-bottom: 0;
-	  	font-size: 17px;
-	  	font-weight: 500;
+		color: white;
+		font-family: 'Bahnschrift';
+		margin-bottom: 0;
+		font-size: 17px;
+		font-weight: 500;
 	}
 	.geo a {
-	  	color: white;
-	  	font-weight: 300;
+		color: white;
+		font-weight: 300;
 	}
 	.footer-geo {
-	  	display: flex;
-	  	align-items: center;
+		display: flex;
+		align-items: center;
 	}
 	.geo-content {
-	  	display: flex;
-	  	margin-left: 20px;
-	  	margin-right: 20px;
+		display: flex;
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }
 @media (max-width: 767px) {
 	.organization-data {
 		color: white;
-	  	font-family: 'Bahnschrift';
-	  	margin-bottom: 0;
-	  	font-size: 12px;
+		font-family: 'Bahnschrift';
+		margin-bottom: 0;
+		font-size: 12px;
 		font-weight: 400;
 	}
 	.payment-wrapper {
@@ -2869,7 +2869,7 @@ h2:hover {
 		margin-top: 30px;
 		margin-right: 150px;
 	}
-	.rights .organization-data{
+	.rights .organization-data {
 		margin-top: 30px;
 		font-size: 7px;
 		margin-left: 15px;

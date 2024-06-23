@@ -178,6 +178,14 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        overflow: hidden;
+      }
+
+      .container_4 {
+        overflow: hidden;
+      }
+
       .btn-order {
         padding: 6px 12px !important;
         font-size: 12px;
@@ -238,36 +246,41 @@
       display: none;
       position: absolute;
       top: 50%;
-      width: 100%;
-      display: flex;
+      width: 95%;
       justify-content: space-between;
       align-items: center;
       pointer-events: none;
       z-index: 20;
-      transform: translate(-11%, -190%);
-    }
-
-    .nav-arrows img {
-      pointer-events: auto;
-      cursor: pointer;
-      width: 3rem;
-      height: 3rem;
-    }
-
-    .nav-arrows .prev {
-      width: 4rem;
-      height: 7rem;
-    }
-
-    .nav-arrows .next {
-      width: 4rem;
-      height: 6rem;
+      transform: translate(-8%, -300%);
     }
 
     @media (max-width: 768px) {
       .nav-arrows {
         display: flex;
+        width: 97%;
       }
+    }
+
+    @media (max-width:566px) {
+      .nav-arrows {
+        transform: translate(-11%, -300%);
+      }
+
+    }
+
+    @media (max-width:420px) {
+      .nav-arrows {
+        width: 95%;
+        transform: translate(-15%, -300%);
+      }
+
+    }
+
+    .nav-arrows img {
+      pointer-events: auto;
+      cursor: pointer;
+      width: 2rem;
+      height: 4rem;
     }
 
     .container_4 {
@@ -445,6 +458,111 @@
       .post-entry-2 .book-now {
         margin-top: 15px;
       }
+
+      .container-desktop {
+        display: block;
+      }
+
+      .container-mobile {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .container-mobile {
+          display: block;
+          margin-top: 50px;
+        }
+
+        .container-desktop {
+          display: none;
+        }
+
+        .tariff-header {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 20px;
+        }
+
+        .tariff-container {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+        }
+
+        .tariff-entry {
+          flex: 0 0 auto;
+          scroll-snap-align: start;
+          width: 100%;
+          height: calc(100% / 3);
+          margin-right: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          background: #fff;
+        }
+
+        .tariff-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+        }
+
+        .tariff-content img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        .tariff-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .tariff-details h2 {
+          margin-bottom: 10px;
+        }
+
+        .tariff-price-btn {
+          background-color: red;
+          color: white;
+          text-align: center;
+          padding: 10px;
+          border-radius: 5px;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+
+        .tariff-price-btn.disabled {
+          background-color: grey;
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+
+        .modal-dialog {
+          max-width: 80%;
+        }
+
+        .modal-body img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+
+        .additional-items {
+          display: flex;
+          overflow-x: auto;
+          margin-top: 20px;
+        }
+
+        .additional-item {
+          flex: 0 0 auto;
+          margin-right: 10px;
+        }
+      }
     </style>
 
   </div>
@@ -604,7 +722,12 @@
 
 
     <div class="container_4">
+      <div class="nav-arrows">
+        <img src="images/left.png" class="prev" alt="Left Arrow">
+        <img src="images/right.png" class="next" alt="Right Arrow">
+      </div>
       <div class="row row_2 align-items-stretch">
+
         <div class="col-lg-3 col-md-6 mb-5">
           <div class="post-entry-2 h-100">
             <a>
@@ -642,14 +765,117 @@
           </div>
         </div>
       </div>
-      <div class="nav-arrows">
-        <img src="images/left.png" class="prev" alt="Left Arrow">
-        <img src="images/right.png" class="next" alt="Right Arrow">
+    </div>
+
+    <div class="container container-mobile">
+      <div class="tariff-header">ТАРИФЫ</div>
+      <div class="row align-items-stretch">
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+            data-tariff="ТАРИФ «неПросто посмотреть»" data-time="45 минут" data-price="3000 рублей" data-people="1-2"
+            data-items="15 элементов стекла, 10 кассет, 10 элементов посуды, 5 предметов электроники">
+            <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«неПросто посмотреть»</h2>
+              <div class="tariff-price-btn">3 000Р</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+            data-tariff="ТАРИФ «Час будет жарким»" data-time="60 минут" data-price="5000 рублей" data-people="1-4"
+            data-items="10 предметов из гипса, 20 элементов стекла, 10 кассет, 30 элементов посуды, 3 предмета бытовой техники, 5 предметов электроники">
+            <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Час будет жарким»</h2>
+              <div class="tariff-price-btn">5 000 рублей</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+            data-tariff="ТАРИФ «Только спокойствие" data-time="90 минут" data-price="7000 рублей" data-people="1-4"
+            data-items="15 предметов из гипса, 30 элементов стекла, 15 кассет, 20 элементов посуды, 3 предмета бытовой техники, 10 предметов электроники, 1 предмет мебели">
+            <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Только спокойствие</h2>
+              <div class="tariff-price-btn">7000 рублей</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Не сломайся!»"
+            data-time="120 минут" data-price="9000 рублей" data-people="1-4"
+            data-items="20 предметов из гипса, 20 элементов стекла, 20 кассет, 20 элементов посуды, 6 предметов бытовой техники, 10 предметов электроники, 1 предмет мебели">
+            <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Не сломайся!»</h2>
+              <div class="tariff-price-btn">9000 рублей</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Решать тебе»"
+            data-time="45 минут" data-price="4000 рублей" data-people="1-6" data-items="Ты выбираешь самостоятельно">
+            <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Решать тебе»</h2>
+              <div class="tariff-price-btn">4000 рублей</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Стерва»"
+            data-time="60 минут" data-price="6000 рублей" data-people="1-3"
+            data-items="30 элементов стекла, 10 изделий из гипса 18+, 20 элементов посуды, 10 кассет, 5 картонных коробок, 2 эротических антистресса, 3 бытовых предмета">
+            <img src="images/photo_8_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Стерва»</h2>
+              <div class="tariff-price-btn">6000 рублей</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry">
+            <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Корпоративный»</h2>
+              <div class="tariff-price-btn disabled" disabled>В разработке</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry">
+            <img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«На каждый день»</h2>
+              <div class="tariff-price-btn disabled" disabled>В разработке</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry">
+            <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Детский»</h2>
+              <div class="tariff-price-btn disabled" disabled>В разработке</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-5 col-12">
+          <div class="tariff-entry">
+            <img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
+            <div class="tariff-details">
+              <h2>«Свидание»</h2>
+              <div class="tariff-price-btn disabled" disabled>В разработке</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
 
-    <div class="container">
+    <div class="container container-desktop">
       <div class="row align-items-stretch">
         <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-12">
           <div class="post-entry-1 h-100" onclick="openHalfScreenBlock()">
@@ -787,6 +1013,43 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="tariffModal" tabindex="-1" role="dialog" aria-labelledby="tariffModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tariffModalLabel">Тариф</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="Tariff Image" id="tariffModalImage">
+          <h2 id="tariffModalTitle">Тариф</h2>
+          <p><strong>Что входит?</strong></p>
+          <ul id="tariffModalList"></ul>
+          <p><strong>Время:</strong> <span id="tariffModalTime"></span></p>
+          <p><strong>Цена:</strong> <span id="tariffModalPrice"></span></p>
+          <p><strong>Количество человек:</strong> <span id="tariffModalPeople"></span></p>
+          <div class="additional-items">
+            <div class="additional-item">
+              <img src="images/item1.jpg" alt="Item 1" class="img-fluid">
+              <p>Item 1</p>
+            </div>
+            <div class="additional-item">
+              <img src="images/item2.jpg" alt="Item 2" class="img-fluid">
+              <p>Item 2</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Добавить в тариф</button>
+        </div>
       </div>
     </div>
   </div>
@@ -997,6 +1260,33 @@
 
         requestAnimationFrame(animation);
       }
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $('#tariffModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      var tariff = button.data('tariff');
+      var time = button.data('time');
+      var items = button.data('items').split(',');
+      var price = button.data('price');
+      var people = button.data('people');
+      var modal = $(this);
+      modal.find('.modal-title').text(tariff);
+      modal.find('#tariffModalTitle').text(tariff);
+      modal.find('#tariffModalTime').text(time);
+      modal.find('#tariffModalPrice').text(price);
+      modal.find('#tariffModalPeople').text(people);
+      modal.find('#tariffModalImage').attr('src', button.find('img').attr('src'));
+
+      var itemList = modal.find('#tariffModalList');
+      itemList.empty();
+
+      items.forEach(function (item) {
+        itemList.append('<li>' + item + '</li>');
+      });
     });
   </script>
   <script src="js/jquery-3.3.1.min.js"></script>
