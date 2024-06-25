@@ -2248,28 +2248,111 @@ h2:hover {
 }
 .container_2 {
 	margin-right: auto;
-	padding-right: 15px;
 	display: flex;
 	align-items: start;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+.container_3 {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%; 
+	background-size: cover; 
+	background-position: center; 
+	position: relative;
+}
 .container_3 h2 {
 	margin-left: 80px;
 	margin-bottom: 0;
 	margin-top: 50px;
 	color: rgb(255, 255, 255);
-	font-size: 48px;
-	font-family: 'Bahnschrift';
+	font-size: 78px;
+	font-family: 'Kontemporary';
+	font-weight: 100;
+	display: flex;
+	justify-content: center;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Регулируйте отступ сверху по вашему усмотрению */
+}
+
+@media (min-width: 768px) {
+	.svg-ros {
+		display: flex;
+		justify-content: center;
+		margin-left: 70px;
+		margin-top: -10px;
+	}
+	.svg-arrow {
+		display: flex;
+		justify-content: center;
+		margin-left: -200px;
+	}
+	.svg-arrow-1 {
+		display: flex;
+		justify-content: center;
+		margin-left: -170px;
+		margin-top: -12px;
+	}
+	.svg-arrow-2 {
+		display: flex;
+		justify-content: center;
+		margin-left: -150px;
+		margin-top: -25px;
+	}
+}
+@media (max-width: 767px) {
+	.svg-ros {
+		margin-left: 50px;
+		margin-top: -10px;
+	}
+	.svg-arrow {
+		margin-left: 40px;
+	}
+	.svg-arrow-1 {
+		margin-left: 70px;
+		margin-top: -22px;
+	}
+	.svg-arrow-2 {
+		margin-left: 88px;
+		margin-top: -35px;
+	}
+}
+.button-block p {
+	display: flex;
+	background: linear-gradient(to right, #FF4444, #D10000);
+	flex-direction: row; /* изменяем направление блока на вертикальное */
+	align-items: center; /* выравниваем элементы по левому краю */	
+	font-size: 24px;
+	font-weight: 900;
+	color: white;
+	cursor: pointer;
+	border: 1px solid white; /* добавляем черную тонкую обводку */
+	border-radius: 50px; /* закругляем углы блока */
+	margin-top: 20px;
+	text-shadow: 0 0 10px white;
+	padding: 5px 20px;
+	margin-bottom: 50px
+}
+
+@media (max-width: 767px) {
+	.button-block p {
+		font-size: 16px;
+	}
+}
+
 .video_yt {
 	position: relative;
 	padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
 	height: 0;
 	overflow: hidden;
 	margin: 80px;
-	margin-bottom: 0px;
+	margin-top: 30px;
+	margin-bottom: -100px;
 	border-radius: 30px;
 }
 
@@ -2278,11 +2361,13 @@ h2:hover {
 		margin: 0; /* Убираем отступы */
 		margin-top: 50px;
 		text-align: center; /* Выравниваем текст по центру */
-		font-size: 36px; /* Уменьшаем размер шрифта для мобильных устройств */
+		font-size: 60px; /* Уменьшаем размер шрифта для мобильных устройств */
+		font-family: 'Kontemporary';
+		font-weight: 100;
 	}
 	.video_yt {
-		margin-bottom: 50px;
-		margin-top: 30px;
+		margin-bottom: 70px;
+		margin-top: 20px;
 		margin-left: 20px;
 		margin-right: 20px;
 	}
@@ -2299,12 +2384,12 @@ h2:hover {
 }
 @media (min-width: 768px) {
 	.container_2 {
-		width: 750px;
+		width: 100%;
 	}
 }
 @media (min-width: 992px) {
 	.container_2 {
-		width: 970px;
+		width: 100%;
 	}
 }
 @media (min-width: 1200px) {
@@ -2319,6 +2404,7 @@ h2:hover {
 	font-size: 24px;
 	font-family: 'Bahnschrift';
 	font-weight: 500;
+	margin-top: 50px;
 }
 
 .section-heading-1-p a {
@@ -2338,15 +2424,30 @@ h2:hover {
 		font-size: 18px;
 	}
 }
-
-.contact-blocks {
-	margin-top: 20px;
-	margin-left: 100px;
-	margin-right: 180px;
-	font-size: 24px;
-	font-family: 'Bahnschrift';
-	font-weight: 500;
+@media (min-width: 768px) {
+	.contact-blocks {
+		margin-top: 20px;
+		margin-left: 100px;
+		font-size: 24px;
+		font-family: 'Bahnschrift';
+		font-weight: 500;
+	}
 }
+
+@media (min-width: 992px) {
+	.contact-blocks {
+		margin-top: 20px;
+		margin-left: 40px;
+		margin-right: 40px;
+		font-size: 24px;
+		font-family: 'Bahnschrift';
+		font-weight: 500;
+	}
+	.section-heading-1-p {
+		padding-left: 50px;
+	}
+}
+
 
 .contact-block {
 	display: flex;
@@ -2425,7 +2526,7 @@ h2:hover {
 	.contact-blocks {
 		margin-top: 20px;
 		margin-left: 0;
-		margin-right: 70px;
+		margin-right: 0px;
 		margin-bottom: 50px;
 		font-size: 24px;
 		font-family: 'Bahnschrift';
@@ -2794,7 +2895,7 @@ h2:hover {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 400;
-	border: none;
+	border: 1px solid white;
 	border-radius: 30px;
 	cursor: pointer;
 	margin-top: 10px; /* Отступ сверху */
@@ -2837,8 +2938,11 @@ h2:hover {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+	.geo-text {
+		align-items: center;
+	}
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.organization-data {
 		color: white;
 		font-family: 'Bahnschrift';
@@ -2881,13 +2985,15 @@ h2:hover {
 		padding-bottom: 50px;
 	}
 }
-/*
+@media (min-width: 768px) {
 .geomet {
   	width: 40px;
   	padding-bottom: 40px;
 	padding-top: 10px;
 }
-.geo {
+.geo-text {
+	display: flex;
+    align-items: center;
   	color: white;
   	font-family: 'Bahnschrift';
   	margin-bottom: 0;
@@ -2898,12 +3004,16 @@ h2:hover {
   	color: white;
   	font-weight: 300;
 }
+.geo p {
+	margin-bottom: 0;
+}
 .footer-geo {
   	display: flex;
   	align-items: center;
 }
 .geo-content {
   	display: flex;
+	align-items: center;
   	margin-left: 20px;
   	margin-right: 20px;
 }
@@ -2911,14 +3021,15 @@ h2:hover {
 	color: white;
   	font-family: 'Bahnschrift';
   	margin-bottom: 0;
-  	font-size: 18px;
 	font-weight: 400;
 }
 .payment-wrapper {
 	display: flex;
 	align-items: flex-start;
+	justify-content: space-between;
 	margin-left: 15px;
 	margin-right: 15px;
+	font-size: 18px;
 }
 .payment-wrapper-column {
 	display: flex;
@@ -2930,25 +3041,24 @@ h2:hover {
 	flex-direction: column;
 	margin-left: 22px;
 }
-.payment {
-	width: 117px;
-}
+
 .organization-data-left {
 	margin-left: 15px;
 	margin-top: 30px;
 	margin-right: 150px;
+	font-size: 18px;
 }
 .rights .organization-data{
 	margin-top: 50px;
-	font-size: 13px;
 	margin-left: 15px;
 	margin-right: 15px;
 	font-weight: 100;
 }
 .rights {
 	padding-bottom: 50px;
+	font-size: 13px;
 }
-*/
+}
 @media (max-width: 767px) {
 	.text-justify {
 		text-align: justify;

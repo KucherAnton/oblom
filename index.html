@@ -451,10 +451,6 @@
           line-height: 15px;
         }
 
-        .video_yt {
-          margin: 40px
-        }
-
       }
 
       .post-entry-2 {
@@ -469,17 +465,37 @@
 
       .container-desktop {
         display: block;
-        background-image: url('images/мазки.webp');
+        background-image: url('images/макет.webp');
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 60px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
 
       .container-mobile {
         display: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 60px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
 
       @media (max-width: 768px) {
         .container-mobile {
           display: block;
-          margin-top: 50px;
+          padding-top: 50px;
+          background-image: url('images/макет.webp');
+          background-size: cover;
+		      background-position: center center;
+		      background-repeat: no-repeat;
         }
 
         .container-desktop {
@@ -488,7 +504,7 @@
 
         .tariff-header {
           text-align: center;
-          font-size: 5rem;
+          font-size: 60px;
           margin-bottom: 20px;
           font-family: 'Kontemporary';
         }
@@ -806,7 +822,8 @@
       </div>
     </div>
   </div>
-  <div class="container container-mobile" style="background-image: url('images/мазки.webp')">
+  
+  <div class="container-mobile">
     <div class="tariff-header">ТАРИФЫ</div>
     <div class="row align-items-stretch">
       <div class="col-lg-4 col-md-6 mb-5 col-12">
@@ -914,7 +931,7 @@
   </div>
 
 
-  <div class="container container-desktop">
+  <div class="container-desktop">
     <div class="row align-items-stretch">
       <div class="col-lg-3 col-md-4 col-sm-6 mb-5 col-12">
         <div class="post-entry-1 h-100" onclick="openHalfScreenBlock()">
@@ -1136,13 +1153,55 @@
 
   <div id="atmosphere" style="display: flex; justify-content: center; align-items: center;">
     <div class="container_3"
-      style="background-image: url(images/photo_10_2024-04-28_16-20-58_result.webp); width: 100%; background-size: cover; background-position: center; position: relative;">
+      style="background-image: url(images/background-video.webp);">
       <h2>АТМОСФЕРА</h2>
+      <div class="svg-ros">
+        <svg width="259" height="37" viewBox="0 0 259 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 14.2549C56.8232 16.1157 113.1 12.5007 168.669 7.61113C188.492 5.86685 206.111 
+          3.96724 225.88 2.60469C233.052 2.11039 240.229 1.55917 247.418 1.47115C250.534 1.43299 254.514 
+          0.0424372 256.738 2.22684C258.251 3.71384 253.069 4.49793 251.007 4.9977C243.051 6.92608 234.95 8.23499 
+          226.857 9.46886C191.221 14.9016 155.351 17.3705 119.391 19.3558C109.922 19.8786 87.0844 20.8229 75.9392 
+          21.6858C73.7041 21.8589 71.4219 21.8976 69.2639 22.5045C68.9163 22.6023 69.5401 23.3123 69.8937 23.3861C74.9341 
+          24.4384 91.2282 25.3966 94.0757 25.5273C120.685 26.7484 147.333 26.4642 173.958 26.8182C180.561 26.906 
+          187.168 26.91 193.764 27.2276C195.681 27.3199 200.232 26.2879 199.463 28.0462C198.569 30.0888 195.095 
+          28.9687 192.882 29.2427C188.141 29.8299 183.373 30.1712 178.618 30.6282C175.879 30.8915 162.48 31.9974 
+          157.963 32.8637C153.608 33.699 158.698 34.727 159.695 35.2253" 
+          stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="svg-arrow">
+        <svg width="57" height="206" viewBox="0 0 57 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.2694 1C17.1349 7.05345 11.9822 16.9732 8.57211 25.4118C-0.324579 47.4274 -1.07134 
+          72.0218 5.49314 94.7986C7.63051 102.215 12.4214 110.772 21.5753 108.214C35.8888 104.215 33.8002 
+          86.2561 23.9395 78.4141C17.4688 73.2681 10.0827 82.3609 7.06011 87.3211C-1.4131 101.226 0.300694 
+          121.402 4.33853 136.392C8.61881 152.283 16.4896 168.994 28.393 180.625C36.8706 188.909 46.2229 
+          197.576 55.9387 204.377" 
+          stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>          
+      </div>
+      <div class="svg-arrow-1">
+        <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.95581 1.94824C6.294 2.86155 10.56 5.20166 14.6528 
+          6.86435C17.6959 8.10059 20.8096 9.18775 23.9191 10.2243" 
+          stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>          
+      </div>
+      <div class="svg-arrow-2">
+        <svg width="8" height="26" viewBox="0 0 8 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.00647 1.89746C2.05401 9.57943 5.14798 16.879 6.41772 24.4974" 
+          stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>          
+      </div>
       <div class="video_yt">
         <iframe width="100%" height="600" src="https://www.youtube.com/embed/CQtXkesrqZc?si=Ui4iSi-DfBVnBzg6"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="button-container">
+        <a href="https://www.youtube.com/@rage_center_obLOM" class="button-block">
+          <p>БОЛЬШЕ ВИДЕО</p>
+        </a>
       </div>
     </div>
   </div>
@@ -1266,7 +1325,7 @@
       <div class="geo-content">
         <img src="images/geomet.png" class="geomet">
         <div class="geo-text">
-          <p class="geo">Мы находимся по адресу:</p>
+          <p class="geo">Мы находимся по адресу :</p>
           <p class="geo"><a href="https://yandex.ru/maps/org/tsentr_yarosti_oblom/147303220168">
               г. Ростов-на-Дону, пр. Будённовский, 81</a></p>
         </div>
