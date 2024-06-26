@@ -250,8 +250,14 @@ html {
 	border-width: 5px;
 }
 .text-center {
-	bottom: 50px;
+	
 }
+@media (max-width: 767px) {
+	.center-text {
+		margin-top: 200px;
+	}
+}
+
 .btn {
 	text-decoration: none !important;
 	padding: 15px 20px !important;
@@ -1773,21 +1779,29 @@ h2:hover {
 }
 .social-image {
 	position: absolute;
-	margin: 120px;
-	margin-left: 0;
-	bottom: auto;
-	margin-bottom: 0;
-	left: -50px;
+	bottom: 100px;
+	left: 0;
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 992px) {
 	.social-image img {
 		max-width: 50%; /* устанавливаем максимальную ширину изображения */
 		position: relative;
-		margin: -1120px;
-		margin-left: 0;
+		margin-top: -1270px;
+		margin-left: 10px;
 		margin-bottom: 0;
 		margin-right: 20px;
-		bottom: 50px;
+		bottom: 100px;
+	}
+}
+@media (max-width: 767px) {
+	.social-image img {
+		max-width: 50%; /* устанавливаем максимальную ширину изображения */
+		position: relative;
+		margin-top: -1270px;
+		margin-left: 10px;
+		margin-bottom: 0;
+		margin-right: 20px;
+		bottom: 100px;
 	}
 }
 
@@ -2237,6 +2251,12 @@ h2:hover {
 	padding-left: 100px;
 	font-family: 'Kontemporary';
 }
+
+@media (max-width: 992px) {
+	.booking {
+		padding-left: 220px;
+	}
+}
 @media (max-width: 767px) {
 	.booking {
 		font-size: 60px; /* размер шрифта будет зависеть от ширины экрана */
@@ -2413,6 +2433,19 @@ h2:hover {
 .section-heading-1-p a:hover {
 	color: rgb(236, 105, 10);
 }
+@media (min-width: 768px) {
+	.section-heading-1-p {
+		font-size: 18px;
+	}
+}
+@media (min-width: 768px) {
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 100%;
+    }
+}
 @media (max-width: 767px) {
 	.section-heading-1-p {
 		padding-left: 0;
@@ -2428,6 +2461,7 @@ h2:hover {
 	.contact-blocks {
 		margin-top: 20px;
 		margin-left: 100px;
+		margin-right: -120px;
 		font-size: 24px;
 		font-family: 'Bahnschrift';
 		font-weight: 500;
@@ -2861,31 +2895,33 @@ h2:hover {
 }
 
 .rounded-button {
+	display: flex;
+	flex-direction: row; /* изменяем направление блока на вертикальное */
+	align-items: center; /* выравниваем элементы по левому краю */	
 	background: linear-gradient(to right, #ff6b00, #994000);
 	border: 2px solid rgba(204, 204, 204); /* Убираем рамку */
 	color: white; /* Цвет текста */
 	padding: 2px 30px; /* Отступы */
 	text-align: center; /* Выравнивание текста по центру */
 	text-decoration: none; /* Убираем подчеркивание */
-	display: inline-block; /* Встраивание как блочный элемент */
-	font-size: 24px; /* Размер шрифта */
+	font-size: 36px; /* Размер шрифта */
 	font-weight: 500;
 	font-family: 'Bahnschrift';
 	border-radius: 25px; /* Закругленные углы */
-	margin-top: 20px; /* Отступ сверху */
-	margin-bottom: 50px;
+	
+	cursor: pointer;
 }
-
+@media (max-width: 767px) {
+	.rounded-button {
+		font-size: 20px;
+		margin-bottom: 80px;
+		padding: 2px 20px; /* Отступы */
+	}
+}
 .ftco-blocks-cover-1 .container {
 	position: relative;
 }
 
-.ftco-blocks-cover-1 .rounded-button {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-}
 /* Стили для кнопки "Забронировать" */
 .book-now {
 	display: inline-block;
@@ -2911,7 +2947,12 @@ h2:hover {
 	font-size: 15px;
 	background-color: #393939;
 }
-
+@media (max-width: 992px) {
+	.geo {
+		line-height: 30px;
+		font-size: 22px;
+	}
+}
 @media (max-width: 767px) {
 	.geomet {
 		width: 40px;
