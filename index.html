@@ -80,8 +80,9 @@
       /* Белый текст */
       border: none;
       border-radius: 10px;
-      width: 60%;
-      left: 20%;
+      /*width: 60%;
+      left: 20%;*/
+      width: 100%;  /*я хз так лучше смотрится вроде */
       overflow: hidden;
       font-family: 'Bahnschrift';
       font-weight: 500;
@@ -375,7 +376,6 @@
       <div class="img-wrap animate-box">
         <img src="images/photo_3_2024-04-28_16-20-58_result.webp" class="image_1" width="100%">
       </div>
-
       <div class="col-md-5 animate-box">
         <div class="section-heading">
           <img src="images/Group 4.png" class="image_2" width="100%">
@@ -389,8 +389,21 @@
             ▸и просто хорошо провести время с друзьями</p>
           <p class="expectation">Мы ждем тебя, наш буйный больной!</p>
         </div>
+        <div class="vector-1">
+          <svg width="60" height="18" viewBox="0 0 77 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6.81293C7.85484 6.81293 13.7352 6.99213 19.5817 6.58609C31.9806 
+            5.72499 44.2834 3.21741 56.7059 2.35172C61.2697 2.03368 65.9296 1.82627 70.4987 
+            2.20049C71.262 2.26301 74.3836 2.3644 74.9523 3.3347C75.2574 3.8553 74.0208 4.04083 
+            73.4899 4.20426C71.3018 4.87775 68.203 5.49838 66.0783 5.82995C57.8614 7.11228 49.5493 
+            7.28718 41.3178 8.43863C33.4834 9.53452 25.314 10.6968 17.7869 13.5426C17.6147 13.6077 
+            11.9698 15.9052 15.7928 15.2817C29.3063 13.0778 42.7287 11.1971 56.4068 11.2363C57.8584 
+            11.2405 63.3038 11.2529 58.2015 12.3327C55.257 12.9559 52.2253 13.0469 49.2943 13.6938C48.8464 
+            13.7926 50.0588 14.2829 50.4908 14.4499C51.585 14.8729 51.9166 15.2778 52.5514 16" 
+            stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+          </svg>                                
+        </div>
       </div>
-
+      <img src="images/lenta1.png" width="100%" class="image-overlay">
     </div>
 
     <style>
@@ -425,7 +438,7 @@
           /* Скрываем размытие на больших экранах */
         }
       }
-
+      
       @media (max-width: 767px) {
         .container_1 {
           padding: 20px;
@@ -436,21 +449,23 @@
           display: block;
           margin-bottom: 20px;
           margin-left: 60px;
+          padding-bottom: 0px;
         }
 
         .section-heading {
           margin-bottom: 180px;
           background-color: white;
-          opacity: 0.7;
+          /* opacity: 0.8; */
           /* Добавляем полупрозрачность */
           border-radius: 21px;
           /* Закругленные углы */
+          margin-top: 150px;
         }
 
         .section-heading p {
           font-size: 14px;
-          padding-left: 40px;
-          padding-right: 40px;
+          padding-left: 30px;
+          padding-right: 30px;
           opacity: 1;
           line-height: 15px;
         }
@@ -602,7 +617,7 @@
           display: flex;
           justify-content: space-between;
           width: 100%;
-          padding: 0 18px;
+          
         }
 
         .additional-item {
@@ -621,6 +636,18 @@
         .additional-item.selected img {
           border: 4px ridge #ff6e00;
         }
+
+        .additional-item-price {
+          padding-top: 10px;
+          display: flex;
+          justify-content: center;
+        }
+        
+        .additional-item-number {
+          padding-top: 10px;
+          margin-bottom: 20px;
+        }
+
       }
     </style>
 
@@ -1285,7 +1312,7 @@
         <img src="images/photo_15_2024-04-28_16-20-58_result.webp" class="image_1" width="100%">
 
       </div>
-      <div class="col-md-6 animate-box">
+      <div class="col-md-6 animate-box animate-box-1">
         <div class="booking">БРОНИРОВАНИЕ</div>
         <div class="contact-blocks">
           <a href="https://vk.com/rage_center_oblom" class="contact-block">
