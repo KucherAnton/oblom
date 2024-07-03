@@ -33,11 +33,15 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script src="https://unpkg.com/react/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
   <script src="sweetalert2.all.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -247,6 +251,37 @@
       #tarifModalImage {
         width: 50%;
       }
+
+      .tariff-entry {
+        display: flex;
+        align-items: center;
+      }
+
+      .tariff-details {
+        margin-left: 20px;
+        background-color: black;
+      }
+
+      .swiper-container {
+        width: 200%;
+        height: 50rem;
+        margin-top: 5rem;
+      }
+
+      .swiper-wrapper {
+        gap: 9rem
+      }
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #000;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #ff0000;
+      }
     }
 
     @media (max-width:566px) {
@@ -279,6 +314,17 @@
       display: flex;
       transition: transform 0.5s ease;
     }
+
+    .row_3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-mobile {
+      width: 10rem;
+      height: 13rem;
+    }
   </style>
 
   <title>Центр ярости обЛОМ</title>
@@ -292,19 +338,19 @@
       <img src="images/boxing.webp" alt="Boxer Image">
     </div>
   </div>
-  
+
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const modal = document.querySelector(".modal-x");
       const closeButton = document.querySelector(".close-x");
-  
+
       modal.style.display = "block";
-  
-      closeButton.addEventListener("click", function() {
+
+      closeButton.addEventListener("click", function () {
         modal.style.display = "none";
       });
     });
-  </script>  
+  </script>
 
   <div class="site-wrap" id="home-section">
     <div class="site-mobile-menu site-navbar-target">
@@ -570,6 +616,7 @@
 
       .tariff-details h2 {
         margin-bottom: 10px;
+        margin-top: 10px
       }
 
       .tariff-price-btn {
@@ -585,7 +632,6 @@
       .tariff-price-btn.disabled {
         background-color: grey;
         cursor: not-allowed;
-        opacity: 0.6;
       }
 
       .chto-vhodit {
@@ -678,6 +724,10 @@
         overflow-y: auto;
       }
 
+      .swiper-container {
+        display: none;
+      }
+
       @media (max-width: 768px) {
         .container-mobile {
           display: block;
@@ -686,6 +736,10 @@
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
+        }
+
+        .swiper-container {
+          display: block;
         }
 
         .container-desktop {
@@ -710,15 +764,17 @@
         }
 
         .tariff-entry {
-          flex: 0 0 auto;
-          scroll-snap-align: start;
-          width: 100%;
-          height: calc(100% / 3);
-          margin-right: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          border-radius: 10px;
-          background: #fff;
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+          height: 150px;
+          background-color: #000;
         }
+
+        .tariff-details {
+          margin-left: 20px;
+        }
+
 
         .tariff-content {
           display: flex;
@@ -738,28 +794,35 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          padding: 10px;
+          padding: 10px 0px 0px 20px;
           text-align: center;
+          height: 140px;
+          transform: translate(-20px, 30px);
         }
 
         .tariff-details h2 {
           margin-bottom: 10px;
+          font-size: 22px;
         }
 
         .tariff-price-btn {
-          background-color: red;
+          background: linear-gradient(to right, #ff0000, #740000);
+          border: 1px solid white;
           color: white;
           text-align: center;
           padding: 10px;
-          border-radius: 5px;
-          margin-top: 10px;
+          border-radius: 30px;
+          margin-top: 40px;
           cursor: pointer;
         }
 
+        .tariff-h2 {
+          font-size: 22px;
+        }
+
         .tariff-price-btn.disabled {
-          background-color: grey;
+          background: linear-gradient(to right, #8b0000, #530000);
           cursor: not-allowed;
-          opacity: 0.6;
         }
 
         .modal-dialog {
@@ -784,7 +847,7 @@
           display: flex;
           overflow-x: auto;
           margin-top: 20px;
-          height: 150px;
+          height: 170px;
           overflow-y: hidden;
         }
 
@@ -800,12 +863,13 @@
           margin-right: 10px;
           width: 30%;
           background-color: #AAAAAA;
-          height: 95px;
+          height: 128px;
           border-radius: 5px;
         }
 
         .additional-item img {
           cursor: pointer;
+          width: 15rem;
         }
 
         .additional-item.selected img {
@@ -1029,111 +1093,148 @@
     </div>
   </div>
 
-  <div class="container-mobile">
-    <div class="tariff-header">ТАРИФЫ</div>
-    <div class="row align-items-stretch">
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
-          data-tariff="ТАРИФ «неПросто посмотреть»" data-time="45 минут" data-price="3000 рублей" data-people="1-2"
-          data-items="15 элементов стекла, 10 кассет, 10 элементов посуды, 5 предметов электроники">
-          <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«неПросто посмотреть»</h2>
-            <div class="tariff-price-btn">3 000Р</div>
+  <div class="tariff-header">ТАРИФЫ</div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="row row_3 swiper-slide">
+        <div class="col">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+            data-tariff="ТАРИФ «неПросто посмотреть»" data-time="45 минут" data-price="3000 рублей" data-people="1-2"
+            data-items="15 элементов стекла, 10 кассет, 10 элементов посуды, 5 предметов электроники">
+            <div class="d-flex">
+              <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«неПросто посмотреть»</h2>
+                <div class="tariff-price-btn">3000Р</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+            data-tariff="ТАРИФ «Час будет жарким»" data-time="60 минут" data-price="5000 рублей" data-people="1-4"
+            data-items="10 предметов из гипса, 20 элементов стекла, 10 кассет, 30 элементов посуды, 3 предмета бытовой техники, 5 предметов электроники">
+            <div class="d-flex">
+              <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Час будет жарким»</h2>
+                <div class="tariff-price-btn">5000 рублей</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+            data-tariff="ТАРИФ «Только спокойствие" data-time="90 минут" data-price="7000 рублей" data-people="1-4"
+            data-items="15 предметов из гипса, 30 элементов стекла, 15 кассет, 20 элементов посуды, 3 предмета бытовой техники, 10 предметов электроники, 1 предмет мебели">
+            <div class="d-flex">
+              <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Только спокойствие</h2>
+                <div class="tariff-price-btn">7000 рублей</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Час будет жарким»"
-          data-time="60 минут" data-price="5000 рублей" data-people="1-4"
-          data-items="10 предметов из гипса, 20 элементов стекла, 10 кассет, 30 элементов посуды, 3 предмета бытовой техники, 5 предметов электроники">
-          <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Час будет жарким»</h2>
-            <div class="tariff-price-btn">5 000 рублей</div>
+      <div class="row row_3 swiper-slide">
+        <div class="col">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Не сломайся!»"
+            data-time="120 минут" data-price="9000 рублей" data-people="1-4"
+            data-items="20 предметов из гипса, 20 элементов стекла, 20 кассет, 20 элементов посуды, 6 предметов бытовой техники, 10 предметов электроники, 1 предмет мебели">
+            <div class="d-flex">
+              <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Не сломайся!»</h2>
+                <br />
+                <div class="tariff-price-btn">9000 рублей</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Решать тебе»"
+            data-time="45 минут" data-price="4000 рублей" data-people="1-6" data-items="Ты выбираешь самостоятельно">
+            <div class="d-flex">
+              <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Решать тебе»</h2>
+                <br />
+                <div class="tariff-price-btn">4000 рублей</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Стерва»"
+            data-time="60 минут" data-price="6000 рублей" data-people="1-3"
+            data-items="30 элементов стекла, 10 изделий из гипса 18+, 20 элементов посуды, 10 кассет, 5 картонных коробок, 2 эротических антистресса, 3 бытовых предмета">
+            <div class="d-flex">
+              <img src="images/photo_8_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Стерва»</h2>
+                <br />
+                <div class="tariff-price-btn">6000 рублей</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Только спокойствие"
-          data-time="90 минут" data-price="7000 рублей" data-people="1-4"
-          data-items="15 предметов из гипса, 30 элементов стекла, 15 кассет, 20 элементов посуды, 3 предмета бытовой техники, 10 предметов электроники, 1 предмет мебели">
-          <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Только спокойствие</h2>
-            <div class="tariff-price-btn">7000 рублей</div>
+      <div class="row row_3 swiper-slide">
+        <div class="col">
+          <div class="tariff-entry">
+            <div class="d-flex">
+              <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Корпоративный»</h2>
+                <br />
+                <div class="tariff-price-btn disabled" disabled>В разработке</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tariff-entry">
+
+            <div class="d-flex"><img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image"
+                class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«На каждый день»</h2>
+                <br />
+                <div class="tariff-price-btn disabled" disabled>В разработке</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="tariff-entry">
+            <div class="d-flex">
+              <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Детский»</h2>
+                <br />
+                <div class="tariff-price-btn disabled" disabled>В разработке</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Не сломайся!»"
-          data-time="120 минут" data-price="9000 рублей" data-people="1-4"
-          data-items="20 предметов из гипса, 20 элементов стекла, 20 кассет, 20 элементов посуды, 6 предметов бытовой техники, 10 предметов электроники, 1 предмет мебели">
-          <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Не сломайся!»</h2>
-            <div class="tariff-price-btn">9000 рублей</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Решать тебе»"
-          data-time="45 минут" data-price="4000 рублей" data-people="1-6" data-items="Ты выбираешь самостоятельно">
-          <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Решать тебе»</h2>
-            <div class="tariff-price-btn">4000 рублей</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal" data-tariff="ТАРИФ «Стерва»"
-          data-time="60 минут" data-price="6000 рублей" data-people="1-3"
-          data-items="30 элементов стекла, 10 изделий из гипса 18+, 20 элементов посуды, 10 кассет, 5 картонных коробок, 2 эротических антистресса, 3 бытовых предмета">
-          <img src="images/photo_8_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Стерва»</h2>
-            <div class="tariff-price-btn">6000 рублей</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry">
-          <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Корпоративный»</h2>
-            <div class="tariff-price-btn disabled" disabled>В разработке</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry">
-          <img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«На каждый день»</h2>
-            <div class="tariff-price-btn disabled" disabled>В разработке</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry">
-          <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Детский»</h2>
-            <div class="tariff-price-btn disabled" disabled>В разработке</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-5 col-12">
-        <div class="tariff-entry">
-          <img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid">
-          <div class="tariff-details">
-            <h2>«Свидание»</h2>
-            <div class="tariff-price-btn disabled" disabled>В разработке</div>
+      <div class="row row_3 swiper-slide">
+        <div class="col">
+          <div class="tariff-entry">
+            <div class="d-flex"><img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image"
+                class="img-fluid image-mobile">
+              <div class="tariff-details">
+                <h2 class="tariff-h2">«Свидание»</h2>
+                <br />
+                <div class="tariff-price-btn disabled" disabled>В разработке</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 
 
@@ -1499,11 +1600,11 @@
                 <option>SMS</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Забронировать</button>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
         </div>
       </div>
     </div>
@@ -1786,6 +1887,21 @@
       }
     });
 
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'horizontal', // Меняем на горизонтальную прокрутку
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
