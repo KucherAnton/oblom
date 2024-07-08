@@ -255,21 +255,38 @@
       .tariff-entry {
         display: flex;
         align-items: center;
+        margin: 0 10rem 2rem;
       }
 
       .tariff-details {
-        margin-left: 20px;
         background-color: black;
+      }
+
+      .tariff-details-2 {
+        padding: 10px 0px 0px 40px !important;
+
       }
 
       .swiper-container {
         width: 200%;
         height: 50rem;
         margin-top: 5rem;
+        overflow: visible;
       }
 
       .swiper-wrapper {
-        gap: 9rem
+        overflow: visible;
+      }
+
+      .swiper-slide {
+        opacity: 0.5;
+        /* Make non-active slides semi-transparent */
+        transition: opacity 0.5s;
+      }
+
+      .swiper-slide-active {
+        opacity: 1;
+        /* Fully visible active slide */
       }
 
       .swiper-pagination-bullet {
@@ -521,6 +538,8 @@
 
       }
 
+
+
       .post-entry-2 {
         display: flex;
         flex-direction: column;
@@ -624,6 +643,7 @@
         color: white;
         text-align: center;
         padding: 10px;
+        width: 150px;
         border-radius: 5px;
         margin-top: 10px;
         cursor: pointer;
@@ -763,6 +783,13 @@
           scroll-snap-type: x mandatory;
         }
 
+        .popapisya {
+          margin: 60px 0px 0px 70px;
+          background: transparent;
+        }
+
+
+
         .tariff-entry {
           display: flex;
           align-items: center;
@@ -887,6 +914,86 @@
           margin-bottom: 20px;
         }
 
+        .popa {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .popapisya h2 {
+          font-size: 18px;
+        }
+
+        .tariff-price-btn {
+          padding: 2px;
+          margin-top: 20px
+        }
+
+        .popa {
+          margin-top: 5px;
+        }
+
+        .popa2 {
+          margin-top: 20px;
+        }
+
+        .popapisya {
+          margin: 60px 0 0 10px;
+        }
+
+        .image-mobile {
+          height: 12rem;
+          width: 8rem;
+        }
+
+        .tariff-entry {
+          height: 100px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .tariff-price-btn {
+          width: 100px;
+        }
+
+        .popapisya h2 {
+          font-size: 14px;
+        }
+
+        .tariff-price-btn.disabled {
+          font-size: 12px;
+        }
+
+        .popka {
+          margin-top: 30px;
+        }
+      }
+
+      @media (max-width: 470px) {
+        .popapisya h2 {
+          font-size: 12px;
+        }
+
+        .tariff-price-btn {
+          width: 75px;
+          font-size: 14px;
+        }
+
+        .popka {
+          margin-top: 40px;
+        }
+
+        .popaaa {
+          font-size: 10px !important;
+        }
+
+        .tariff-price-btn.disabled {
+          font-size: 10px;
+        }
+
+        .popa3 {
+          margin-top: 15px
+        }
       }
     </style>
 
@@ -1103,9 +1210,9 @@
             data-items="15 элементов стекла, 10 кассет, 10 элементов посуды, 5 предметов электроники">
             <div class="d-flex">
               <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
-                <h2 class="tariff-h2">«неПросто посмотреть»</h2>
-                <div class="tariff-price-btn">3000Р</div>
+              <div class="popapisya">
+                <h2 class="tariff-h2">«неПросто <br /> посмотреть»</h2>
+                <div class="tariff-price-btn popka">3000Р</div>
               </div>
             </div>
           </div>
@@ -1116,9 +1223,10 @@
             data-items="10 предметов из гипса, 20 элементов стекла, 10 кассет, 30 элементов посуды, 3 предмета бытовой техники, 5 предметов электроники">
             <div class="d-flex">
               <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
-                <h2 class="tariff-h2">«Час будет жарким»</h2>
-                <div class="tariff-price-btn">5000 рублей</div>
+              <div class="popapisya">
+                <h2 class="tariff-h2">«Час будет <br /> жарким»</h2>
+                <br />
+                <div class="tariff-price-btn popa">5000Р</div>
               </div>
             </div>
           </div>
@@ -1129,9 +1237,10 @@
             data-items="15 предметов из гипса, 30 элементов стекла, 15 кассет, 20 элементов посуды, 3 предмета бытовой техники, 10 предметов электроники, 1 предмет мебели">
             <div class="d-flex">
               <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
-                <h2 class="tariff-h2">«Только спокойствие</h2>
-                <div class="tariff-price-btn">7000 рублей</div>
+              <div class="popapisya">
+                <h2 class="tariff-h2">«Только <br /> спокойствие»</h2>
+                <br />
+                <div class="tariff-price-btn popa">7000Р</div>
               </div>
             </div>
           </div>
@@ -1144,10 +1253,10 @@
             data-items="20 предметов из гипса, 20 элементов стекла, 20 кассет, 20 элементов посуды, 6 предметов бытовой техники, 10 предметов электроники, 1 предмет мебели">
             <div class="d-flex">
               <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
+              <div class="popapisya">
                 <h2 class="tariff-h2">«Не сломайся!»</h2>
                 <br />
-                <div class="tariff-price-btn">9000 рублей</div>
+                <div class="tariff-price-btn">9000Р</div>
               </div>
             </div>
           </div>
@@ -1157,10 +1266,10 @@
             data-time="45 минут" data-price="4000 рублей" data-people="1-6" data-items="Ты выбираешь самостоятельно">
             <div class="d-flex">
               <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
+              <div class="popapisya">
                 <h2 class="tariff-h2">«Решать тебе»</h2>
                 <br />
-                <div class="tariff-price-btn">4000 рублей</div>
+                <div class="tariff-price-btn popa2">4000Р</div>
               </div>
             </div>
           </div>
@@ -1171,10 +1280,10 @@
             data-items="30 элементов стекла, 10 изделий из гипса 18+, 20 элементов посуды, 10 кассет, 5 картонных коробок, 2 эротических антистресса, 3 бытовых предмета">
             <div class="d-flex">
               <img src="images/photo_8_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
+              <div class="popapisya">
                 <h2 class="tariff-h2">«Стерва»</h2>
                 <br />
-                <div class="tariff-price-btn">6000 рублей</div>
+                <div class="tariff-price-btn">6000Р</div>
               </div>
             </div>
           </div>
@@ -1185,8 +1294,8 @@
           <div class="tariff-entry">
             <div class="d-flex">
               <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
-                <h2 class="tariff-h2">«Корпоративный»</h2>
+              <div class="popapisya">
+                <h2 class="tariff-h2 popaaa">«Корпоративный»</h2>
                 <br />
                 <div class="tariff-price-btn disabled" disabled>В разработке</div>
               </div>
@@ -1198,10 +1307,10 @@
 
             <div class="d-flex"><img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image"
                 class="img-fluid image-mobile">
-              <div class="tariff-details">
+              <div class="popapisya">
                 <h2 class="tariff-h2">«На каждый день»</h2>
                 <br />
-                <div class="tariff-price-btn disabled" disabled>В разработке</div>
+                <div class="tariff-price-btn disabled popa2 popa3" disabled>В разработке</div>
               </div>
             </div>
           </div>
@@ -1210,7 +1319,7 @@
           <div class="tariff-entry">
             <div class="d-flex">
               <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile">
-              <div class="tariff-details">
+              <div class="popapisya">
                 <h2 class="tariff-h2">«Детский»</h2>
                 <br />
                 <div class="tariff-price-btn disabled" disabled>В разработке</div>
@@ -1224,7 +1333,7 @@
           <div class="tariff-entry">
             <div class="d-flex"><img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image"
                 class="img-fluid image-mobile">
-              <div class="tariff-details">
+              <div class="popapisya">
                 <h2 class="tariff-h2">«Свидание»</h2>
                 <br />
                 <div class="tariff-price-btn disabled" disabled>В разработке</div>
@@ -1890,7 +1999,7 @@
   </script>
   <script>
     var swiper = new Swiper('.swiper-container', {
-      direction: 'horizontal', // Меняем на горизонтальную прокрутку
+      direction: 'horizontal',
       loop: true,
       slidesPerView: 3,
       spaceBetween: 30,
