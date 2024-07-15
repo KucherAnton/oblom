@@ -557,10 +557,9 @@ h2:hover {
 		max-width: 100%;
 	}
 	.post-entry-1 .img-fluid {
-		max-width: 30%;
+		max-width: 100%;
 	}
 	.post-entry-1::before {
-		max-width: 30%;
 		border-radius: 20px;
 	}
 }
@@ -570,6 +569,10 @@ h2:hover {
 	.display-3 {
 		font-size: 3rem;
 	}
+}
+.margin-left-right-tariffs {
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .play-single-big {
@@ -2279,6 +2282,7 @@ h2:hover {
 		padding-top: 60px;
 		text-align: center;
 		font-weight: 500;
+		line-height: 60px;
 	}
 	.image-overlay {
 		display: inline;
@@ -2710,6 +2714,11 @@ h2:hover {
 .post-entry-1 .post-entry-1-contents h2 {
 	font-size: 18px;
 }
+@media (max-width: 767px) {
+	.post-entry-1 .post-entry-1-contents h2 {
+		line-height: 14px;
+	}
+}
 .post-entry-1 .post-entry-1-contents h2 a {
 	color: #ffffff;
 	font-weight: 400;
@@ -2990,7 +2999,7 @@ h2:hover {
 		color: white;
 		font-family: 'Bahnschrift';
 		margin-bottom: 0;
-		font-size: 17px;
+		font-size: 14px;
 		font-weight: 500;
 	}
 	.geo a {
@@ -3017,6 +3026,12 @@ h2:hover {
 		margin-bottom: 0;
 		font-size: 12px;
 		font-weight: 400;
+	}
+	.organization-data a {
+		color: white;
+	}
+	.organization-data p {
+		color: white;
 	}
 	.payment-wrapper {
 		display: flex;
