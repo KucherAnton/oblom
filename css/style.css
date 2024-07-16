@@ -1796,6 +1796,7 @@ h2:hover {
 		bottom: 100px;
 	}
 }
+
 @media (max-width: 767px) {
 	.social-image img {
 		max-width: 50%; /* устанавливаем максимальную ширину изображения */
@@ -3105,6 +3106,9 @@ h2:hover {
   	font-family: 'Bahnschrift';
   	margin-bottom: 0;
 	font-weight: 400;
+}
+.organization-data a {
+	color: white;
 }
 .payment-wrapper {
 	display: flex;

@@ -682,8 +682,12 @@
       }
 
       .modal-body-image {
-        width: 70%;
-        margin: 0 120px;
+        width: 100%;
+        margin: 0px;
+        height: 600px; /* Задайте желаемую высоту */
+        object-position: center;
+        overflow: hidden;
+        object-fit: cover;
       }
 
       .modal_p {
@@ -862,8 +866,13 @@
         }
 
         .modal-body-image {
-          width: 70%;
-          margin: 0 65px;
+          width: 100%;
+          margin: 0;
+          height: 300px; /* Задайте желаемую высоту */
+          object-position: center;
+          overflow: hidden;
+          object-fit: cover;
+
         }
 
         .modal_p {
@@ -1515,8 +1524,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <img class="modal-body-image" src="" alt="Tariff Image" id="tariffModalImage">
         <div class="modal-body">
-          <img class="modal-body-image" src="" alt="Tariff Image" id="tariffModalImage">
           <p class="chto-vhodit"><strong>Что входит?</strong></p>
           <ul id="tariffModalList" style="line-height: 25px;"></ul>
           <div class="modal_p">
