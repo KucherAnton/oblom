@@ -1808,6 +1808,73 @@ h2:hover {
 		bottom: 100px;
 	}
 }
+.oznakomitelnyi {
+	position: absolute;
+	top: 30px; 
+	right: 20px;
+	padding: 5px;
+	color: #E30000;
+	background-color: white;
+	border-radius: 20px;
+	font-family: 'Bahnschrift';
+	font-weight: 700;
+	font-size: 24px;
+}
+@media (max-width: 768px) {
+	.oznakomitelnyi {
+		position: absolute;
+		top: 10px; 
+		right: 10px;
+		padding: 2px;
+		color: #E30000;
+		background-color: white;
+		border-radius: 20px;
+		font-family: 'Bahnschrift';
+		font-weight: 700;
+		font-size: 12px;
+	}
+}
+.HOT {
+	position: absolute;
+	top: 30px; 
+	right: 20px;
+	padding: 10px;
+	padding-bottom: 5px;
+	color: #E30000;
+	background-color: white;
+	border-radius: 20px;
+	font-family: 'Bahnschrift';
+	font-weight: 700;
+	font-size: 24px;
+	display: flex; 
+	align-items: flex-start;
+}
+.chili {
+	width: 30px;
+	margin-right: 10px;
+}
+@media (max-width: 768px) {
+	.HOT {
+		position: absolute;
+		top: 10px; 
+		right: 10px;
+		padding: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: #E30000;
+		background-color: white;
+		border-radius: 20px;
+		font-family: 'Bahnschrift';
+		font-weight: 700;
+		font-size: 12px;
+		display: flex; 
+		align-items: flex-end;
+	}
+	.chili {
+		width: 20px;
+		margin-right: 5px;
+	}
+}
 
 .owl-all .owl-dots {
 	text-align: center;
