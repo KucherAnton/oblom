@@ -673,14 +673,17 @@ h2:hover {
 	font-weight: 400;
 }
 @media (max-width: 991.98px) {
+	/*
 	.site-navbar {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 	}
+	*/
 }
 .site-navbar .toggle-button {
 	position: absolute;
 	right: 0px;
+	padding-top: 3rem;
 }
 .site-navbar .site-navigation.border-bottom {
 	border-bottom: 1px solid white !important;
@@ -1780,34 +1783,29 @@ h2:hover {
 		margin-bottom: 1px; /* Уменьшите это значение по вашему усмотрению */
 	}
 }
-.social-image {
-	position: absolute;
-	bottom: 100px;
-	left: 0;
+.social-image a {
+	display: block;
+	width: 100%; /* Ширина займет всю доступную ширину родительского контейнера */
 }
-@media (max-width: 992px) {
-	.social-image img {
-		max-width: 50%; /* устанавливаем максимальную ширину изображения */
-		position: relative;
-		margin-top: -1270px;
-		margin-left: 10px;
-		margin-bottom: 0;
-		margin-right: 20px;
+@media (min-width: 769px) {
+	.social-image {
+		position: absolute;
 		bottom: 100px;
+		left: 30px;
+	}
+}
+@media (max-width: 768px) {
+	.social-image {
+		position: absolute;
+		top: 20px;
+		left: 10px;
+	}
+
+	.social-image img {
+		max-width: 60%;
 	}
 }
 
-@media (max-width: 767px) {
-	.social-image img {
-		max-width: 50%; /* устанавливаем максимальную ширину изображения */
-		position: relative;
-		margin-top: -1270px;
-		margin-left: 10px;
-		margin-bottom: 0;
-		margin-right: 20px;
-		bottom: 100px;
-	}
-}
 .oznakomitelnyi {
 	position: absolute;
 	top: 30px; 
@@ -1817,7 +1815,7 @@ h2:hover {
 	background-color: white;
 	border-radius: 20px;
 	font-family: 'Bahnschrift';
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 24px;
 }
 @media (max-width: 768px) {
@@ -1830,7 +1828,7 @@ h2:hover {
 		background-color: white;
 		border-radius: 20px;
 		font-family: 'Bahnschrift';
-		font-weight: 700;
+		font-weight: 500;
 		font-size: 12px;
 	}
 }
@@ -1844,7 +1842,7 @@ h2:hover {
 	background-color: white;
 	border-radius: 20px;
 	font-family: 'Bahnschrift';
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 24px;
 	display: flex; 
 	align-items: flex-start;
@@ -1865,7 +1863,7 @@ h2:hover {
 		background-color: white;
 		border-radius: 20px;
 		font-family: 'Bahnschrift';
-		font-weight: 700;
+		font-weight: 500;
 		font-size: 12px;
 		display: flex; 
 		align-items: flex-end;
