@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "sweetalert2": "github:sweetalert2/sweetalert2"
+  }
+}
