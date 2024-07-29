@@ -3311,6 +3311,34 @@ h2:hover {
     }
 	
 }
+
+@media (max-width: 768px) {
+	.tariff-mobile-container {
+		display: flex;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
+	.tariff-containe {
+		flex: none;
+  		scroll-snap-align: start;
+		margin-top: 50px;
+		margin-left: 50px;
+	}
+}
+@media (max-width: 768px) {
+	.HOT1 {
+		position: relative;
+		left: 300px;
+		top: 2714px;
+		background-color: white;
+		border-radius: 10px;
+		font-family: 'Bahnschrift';
+		font-weight: 800;
+		color: #E30000;
+		padding: 1px;
+	}
+}
 /*<div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="row row_3 swiper-slide">
@@ -3456,3 +3484,116 @@ h2:hover {
     <div class="swiper-pagination"></div>
   </div>
 */
+/*
+  <div class="background-image-tariffs" style="background-image: url('images/Frame\ 1.jpg'); 
+    background-size: cover; background-position: center center; background-repeat: no-repeat;">
+    <div class="tariff-header">ТАРИФЫ</div>
+    <div class="tariff-mobile-container">
+      <div class="tariff-containe">
+
+        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+        data-tariff="ТАРИФ «неПросто посмотреть»" data-time="45 минут" data-price="3000 рублей" data-people="1-2"
+        data-items="15 элементов стекла, 10 кассет, 10 элементов посуды, 5 предметов электроники">
+          <img src="images/photo_17_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«неПросто <br /> посмотреть»</h2>
+            <div class="tariff-price-btn">3000Р</div>
+          </div>
+        </div>
+      
+        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+        data-tariff="ТАРИФ «Час будет жарким»" data-time="60 минут" data-price="5000 рублей" data-people="1-4"
+        data-items="15 элементов из гипса, 10 элементов стекла, 10 кассет, 30 элементов посуды, 3 предмета бытовой техники, 5 предметов электроники">
+          <img src="images/photo_16_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Час будет <br /> жарким»</h2>
+            <div class="tariff-price-btn">5000Р</div>
+            
+          </div>
+        </div>  
+      
+        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+        data-tariff="ТАРИФ «Только спокойствие" data-time="90 минут" data-price="7000 рублей" data-people="1-4"
+        data-items="15 предметов из гипса, 30 элементов стекла, 15 кассет, 20 элементов посуды, 3 предмета бытовой техники, 10 предметов электроники, 1 предмет мебели">
+          <img src="images/photo_18_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Только <br /> спокойствие»</h2>
+            <div class="tariff-price-btn">7000Р</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tariff-containe">
+
+        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+        data-tariff="ТАРИФ «Не сломайся!»" data-time="120 минут" data-price="9000 рублей" data-people="1-4"
+        data-items="20 предметов из гипса, 30 элементов стекла, 20 кассет, 20 элементов посуды, 6 предметов бытовой техники, 10 предметов электроники, 1 предмет мебели">
+          <img src="images/photo_1_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Не <br /> сломайся!»</h2>
+            <div class="tariff-price-btn">9000Р</div>
+          </div>
+        </div>
+
+        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+        data-tariff="ТАРИФ «Решать тебе»" data-time="от 45 минут" data-price="от 4000 рублей" data-people="1-6"
+        data-items="Ты выбираешь самостоятельно, Тарелки (х10) - 700 рублей, Посуда - 70 рублей, Изделия из гипса (х10) - 700 рублей, Бутылки (х10) - 400 рублей, Кассеты (х10) - 400 рублей, Пылесос - 500 рублей, Монитор - 800 рублей, Телевизор - 1000 рублей, Клавиатура - 150 рублей, Компьютерная мышь - 70 рублей, Принтер - 700 рублей, Сканер - 700 рублей, ПК - 1500 рублей, Мебель - 900 рублей, Стул - 700 рублей">
+          <img src="images/photo_2_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Решать <br /> тебе»</h2>
+            <div class="tariff-price-btn">от 4000Р</div>
+          </div>
+        </div>
+
+        <div class="tariff-entry" data-toggle="modal" data-target="#tariffModal"
+        data-tariff="ТАРИФ «Стерва»" data-time="60 минут" data-price="6000 рублей" data-people="1-4"
+        data-items="30 элементов стекла, 10 изделий из гипса 18+, 20 элементов посуды, 10 кассет, 5 картонных коробок, 2 эротических антистресса, 3 бытовых предмета, Тариф предназначен для лиц. старше 18 лет">
+          <img src="images/photo_15_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Стерва» <br /></h2>
+            <div class="tariff-price-btn">6000Р</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tariff-containe">
+
+        <div class="tariff-entry">
+          <img src="images/photo_9_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Корпоративный»<br /></h2>
+            <div class="tariff-price-btn">в разработке</div>
+          </div>
+        </div>
+
+        <div class="tariff-entry">
+          <img src="images/photo_13_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«На каждый <br />день»</h2>
+            <div class="tariff-price-btn">в разработке</div>
+          </div>
+        </div>
+
+        <div class="tariff-entry">
+          <img src="images/photo_14_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Детский»<br /></h2>
+            <div class="tariff-price-btn">в разработке</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tariff-containe">
+
+        <div class="tariff-entry">
+          <img src="images/photo_7_2024-04-28_16-20-58_result.webp" alt="Image" class="img-fluid image-mobile" loading="lazy">
+          <div class="tariff-mobile-text">
+            <h2 class="tariff-h2">«Свидание»<br /></h2>
+            <div class="tariff-price-btn">в разработке</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  */
